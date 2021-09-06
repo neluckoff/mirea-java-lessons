@@ -32,33 +32,24 @@ public class Book {
     public String getAuthor() {
         return author;
     }
-
     public void setAuthor(String author) {
         this.author = author;
     }
-
     public int getCost() {
         return cost;
     }
-
     public void setCost(int cost) {
         this.cost = cost;
     }
-
     public String getBookName() {
         return bookName;
     }
-
     public void setBookName(String bookName) {
         this.bookName = bookName;
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "author='" + author + '\'' +
-                ", cost=" + cost +
-                ", bookName='" + bookName + '\'' +
-                '}';
+        return author + " '" + bookName + "' - Price: " + cost;
     }
 }
