@@ -1,4 +1,6 @@
-package ru.luckoff.mirea.lesson_3;
+package ru.luckoff.mirea.lesson_3.taskOne;
+
+import ru.luckoff.mirea.lesson_3.taskOne.Rectangle;
 
 public class Square extends Rectangle {
     protected double side;

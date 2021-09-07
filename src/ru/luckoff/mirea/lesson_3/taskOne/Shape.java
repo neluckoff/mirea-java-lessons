@@ -1,4 +1,4 @@
-package ru.luckoff.mirea.lesson_3;
+package ru.luckoff.mirea.lesson_3.taskOne;
 
 public abstract class Shape {
     protected String color;
