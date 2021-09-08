@@ -10,19 +10,15 @@ public class Author {
         this.email = email;
         this.gender = gender;
     }
-
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
-
     public String getName() {
         return name;
     }
-
     public char getGender() {
         return gender;
     }
