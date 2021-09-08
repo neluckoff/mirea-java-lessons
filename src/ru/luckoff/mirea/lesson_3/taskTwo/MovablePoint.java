@@ -1,10 +1,10 @@
 package ru.luckoff.mirea.lesson_3.taskTwo;
 
 public class MovablePoint implements Movable{
-    public int x;
-    public int y;
-    public int xSpeed;
-    public int ySpeed;
+    int x;
+    int y;
+    int xSpeed;
+    int ySpeed;
 
     public MovablePoint(int x, int y, int xSpeed, int ySpeed) {
         this.x = x;
@@ -25,21 +25,21 @@ public class MovablePoint implements Movable{
 
     @Override
     public void moveUp() {
-
+        y+=ySpeed;
     }
 
     @Override
     public void moveDown() {
-
+        y-=ySpeed;
     }
 
     @Override
     public void moveLeft() {
-
+        x-=xSpeed;
     }
 
     @Override
     public void moveRight() {
-
+        x+=xSpeed;
     }
 }
