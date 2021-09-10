@@ -40,6 +40,4 @@ public abstract class Shape {
                 ", filled=" + filled +
                 '}';
     }
-
-
 }
