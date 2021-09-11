@@ -1,8 +1,8 @@
 package ru.luckoff.mirea.lesson_3.taskOne;
 
 public class TestStart {
-    public static void main(String[] args) {
-        /*Shape s1 = new Circle(5.5, "RED", false); // Upcast Circle to Shape
+    /*public static void main(String[] args) {
+        Shape s1 = new Circle("RED",  false, 5.5); // Upcast Circle to Shape
         System.out.println(s1); // which version?
         System.out.println(s1.getArea()); // which version?
         System.out.println(s1.getPerimeter()); // which version?
@@ -40,19 +40,19 @@ public class TestStart {
         System.out.println(s4.getSide());
 
 
-        Rectangle r2 = (Rectangle) s4;
+    Rectangle r2 = (Rectangle) s4;
         System.out.println(r2);
         System.out.println(r2.getArea());
         System.out.println(r2.getColor());
         System.out.println(r2.getSide());
         System.out.println(r2.getLength());
 
-        // Downcast Rectangle r2 to Square
-        Square sq1 = (Square) r2;
+    // Downcast Rectangle r2 to Square
+    Square sq1 = (Square) r2;
         System.out.println(sq1);
         System.out.println(sq1.getArea());
         System.out.println(sq1.getColor());
         System.out.println(sq1.getSide());
-        System.out.println(sq1.getLength());*/
-    }
+        System.out.println(sq1.getLength());
+}*/
 }
