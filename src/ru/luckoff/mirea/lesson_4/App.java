@@ -1,9 +1,6 @@
 package ru.luckoff.mirea.lesson_4;
 
-import org.w3c.dom.css.RGBColor;
-
 import javax.swing.*;
-import javax.swing.plaf.DimensionUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,30 +12,28 @@ public class App extends JFrame {
     JButton but1 = new JButton("AC Milan");
     JButton but2 = new JButton("Real Madrid");
 
-    JLabel lab1 = new JLabel("Result: " + score1 + " X " + score2);
-    JLabel lab2 = new JLabel("Last Scorer: N/A");
-    JLabel lab3 = new JLabel("Winner: DRAW");
-
+    JLabel lab1 = new JLabel("Result: " + score1 + " X " + score2, SwingConstants.CENTER);
+    JLabel lab2 = new JLabel("Last Scorer: N/A", SwingConstants.CENTER);
+    JLabel lab3 = new JLabel("Winner: DRAW", SwingConstants.CENTER);
 
     public App() {
         super("Football Scorer");
-        this.setBounds(200, 200, 300, 300);
-        Container container = this.getContentPane();
-        container.setLayout(new GridLayout(3, 3, 1, 1));
-        container.setBackground(new Color(0, 191, 255));
+        this.setBounds(200, 200, 500, 500);
+        Container pane = this.getContentPane();
+        pane.setLayout(new GridLayout(3, 3, 1, 1));
+        pane.setBackground(new Color(0, 191, 255));
+        pane.add(but1);
+        pane.add(but2);
         but1.addActionListener(new ClickBut1());
         but2.addActionListener(new ClickBut2());
         but1.setBackground(new Color(0, 149, 182));
-        but1.setFocusPainted(true);
-        but1.setContentAreaFilled(true);
         but2.setBackground(new Color(0, 149, 182));
 
-        container.add(but1);
-        container.add(but2);
-        container.add(lab1);
-        container.add(lab2);
-        container.add(lab3);
-
+        pane.add(but1);
+        pane.add(but2);
+        pane.add(lab1);
+        pane.add(lab2);
+        pane.add(lab3);
     }
 
     class ClickBut1 implements ActionListener{
