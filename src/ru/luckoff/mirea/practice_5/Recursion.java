@@ -150,7 +150,7 @@ public class Recursion {
     }
 
     public static void recursion12() {
-        java.util.Scanner in = new java.util.Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         if (n > 0) {
             if (n % 2 == 1) {
@@ -163,7 +163,7 @@ public class Recursion {
     }
 
     public static void recursion13() {
-        java.util.Scanner in = new java.util.Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         if (n > 0) {
             int m = in.nextInt();
@@ -194,7 +194,7 @@ public class Recursion {
     }
 
     public static void recursion16(int max, int count) {
-        java.util.Scanner in = new java.util.Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         if (n > 0) {
             if (n > max) {
@@ -212,7 +212,7 @@ public class Recursion {
     }
 
     public static int recursion17() {
-        java.util.Scanner in = new java.util.Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         if (n == 0) {
             return 0;
