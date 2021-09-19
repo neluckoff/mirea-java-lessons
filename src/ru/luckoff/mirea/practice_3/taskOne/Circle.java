@@ -1,4 +1,4 @@
-package ru.luckoff.mirea.lesson_3.taskOne;
+package ru.luckoff.mirea.practice_3.taskOne;
 
 public class Circle extends Shape {
     protected double radius;

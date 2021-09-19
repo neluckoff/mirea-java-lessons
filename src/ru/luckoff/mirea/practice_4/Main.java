@@ -1,4 +1,4 @@
-package ru.luckoff.mirea.lesson_4;
+package ru.luckoff.mirea.practice_4;
 
 public class Main {
     public static void main(String[] args) {

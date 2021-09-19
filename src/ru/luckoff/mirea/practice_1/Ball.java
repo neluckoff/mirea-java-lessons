@@ -1,4 +1,4 @@
-package ru.luckoff.mirea.lesson_1;
+package ru.luckoff.mirea.practice_1;
 
 public class Ball {
     private String name;

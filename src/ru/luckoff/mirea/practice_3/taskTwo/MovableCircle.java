@@ -1,4 +1,4 @@
-package ru.luckoff.mirea.lesson_3.taskTwo;
+package ru.luckoff.mirea.practice_3.taskTwo;
 
 public class MovableCircle implements Movable {
     private int radius;

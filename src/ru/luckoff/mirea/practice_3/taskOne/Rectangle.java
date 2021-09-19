@@ -1,4 +1,4 @@
-package ru.luckoff.mirea.lesson_3.taskOne;
+package ru.luckoff.mirea.practice_3.taskOne;
 
 public class Rectangle extends Shape {
     protected double width;
