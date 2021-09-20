@@ -17,8 +17,8 @@ public class Main {
         for (int i = 0; i < 5; i++) {
             a1[i] = ((int) (Math.random() * 9));
             a2[i] = ((int) (Math.random() * 9));
-            arr2.add(a1[i]);
-            arr1.add(a2[i]);
+            arr2.push(a1[i]);
+            arr1.push(a2[i]);
         }
 
 //        for (int i = 0; i < 5; i++) {
@@ -33,22 +33,25 @@ public class Main {
         int i;
         for (i = 0; !arr1.isEmpty() && !arr2.isEmpty() && i < maxSteps; i++) {
 
-            Integer first = arr1.pop();
-            Integer second = arr2.pop();
+            int first = arr1.pop();
+            int second = arr2.pop();
 
             if ((first == 0 && second == 9) || first > second && (first != 9 && second != 0)) {
-                arr1.add(0, first);
-                arr1.add(0, second);
+                arr1.push(first);
+                arr1.push(second);
             } else if (first < second || (first == 9 && second == 0)) {
-                arr2.add(0, first);
-                arr2.add(0, second);
+                arr2.push(first);
+                arr2.push(second);
             }
         }
 
         if(maxSteps == i) {
             System.out.println("botva");
-        } else {
-            System.out.println(arr1.isEmpty() ? ("second " + i) : ("first " + i));
+        } else if (arr1.isEmpty()) {
+            System.out.println("second " + i);
+        } else if (arr2.isEmpty()) {
+                System.out.println("first " + i);
+            }
         }
     }
-}
+

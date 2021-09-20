@@ -4,10 +4,10 @@ import java.util.Collection;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class WaitList<E> implements IWaitList<E> {
-    private ConcurrentLinkedQueue<E> content;
+    protected ConcurrentLinkedQueue<E> content;
 
     public WaitList() {
-
+        content = new ConcurrentLinkedQueue<>();
     }
 
     public WaitList(ConcurrentLinkedQueue<E> content) {
@@ -23,26 +23,26 @@ public class WaitList<E> implements IWaitList<E> {
 
     @Override
     public void add(E element) {
-
+        content.add(element);
     }
 
     @Override
     public E remove() {
-        return null;
+        return content.remove();
     }
 
     @Override
     public boolean contains(E element) {
-        return false;
+        return content.contains(element);
     }
 
     @Override
-    public boolean containsAll(Collection c) {
-        return false;
+    public boolean containsAll(Collection<E> c) {
+        return content.containsAll(c);
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return content.isEmpty();
     }
 }

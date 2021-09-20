@@ -5,10 +5,11 @@ public class UnfairWaitList<E> extends WaitList<E> {
     }
 
     void remove(E element) {
-
+        content.remove(element);
     }
 
     void moveToBack(E element) {
-
+        content.remove(element);
+        content.add(element);
     }
 }
