@@ -1,6 +1,6 @@
 package ru.luckoff.mirea.practice_6;
 
-public class Student implements Comparable<Student>{
+public class Student {
     private String numGroup;
     private String nameStudent;
     private int averageScore;
@@ -38,10 +38,5 @@ public class Student implements Comparable<Student>{
     @Override
     public String toString() {
         return numGroup + " Name: " + nameStudent + " Score: " + averageScore + "\n";
-    }
-
-    @Override
-    public int compareTo(Student o) {
-        return this.averageScore - o.averageScore;
     }
 }
