@@ -11,8 +11,6 @@ public class Main {
         arr2 = new Stack<>();
         int[] a1 = new int[5];
         int[] a2 = new int[5];
-//        int[] a11 = new int[]{1, 2, 5, 7, 9};
-//        int[] a12 = new int[]{2, 4, 6, 8, 0};
 
         for (int i = 0; i < 5; i++) {
             a1[i] = ((int) (Math.random() * 9));
@@ -21,18 +19,12 @@ public class Main {
             arr1.push(a2[i]);
         }
 
-//        for (int i = 0; i < 5; i++) {
-//            arr2.add(a11[i]);
-//            arr1.add(a12[i]);
-//        }
-
         System.out.println(arr1);
         System.out.println(arr2);
 
         int maxSteps = 106;
         int i;
         for (i = 0; !arr1.isEmpty() && !arr2.isEmpty() && i < maxSteps; i++) {
-
             int first = arr1.pop();
             int second = arr2.pop();
 
@@ -51,7 +43,7 @@ public class Main {
             System.out.println("second " + i);
         } else if (arr2.isEmpty()) {
                 System.out.println("first " + i);
-            }
         }
     }
+}
 
