@@ -33,5 +33,7 @@ public class LabClassUI {
     public static void main(String[] args) {
         LabClassUI start = new LabClassUI();
         start.searchStudent();
+        start.searchStudent();
+        start.searchStudent();
     }
 }

@@ -10,5 +10,4 @@ public class Client {
     public void setChair(Chair chair) {
         this.chair = chair;
     }
-
 }

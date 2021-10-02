@@ -4,7 +4,7 @@ public class Student {
     private String nameStudent;
     private int studentINN;
 
-    public Student(String nameStudent, int averageScore) {
+    public Student(String nameStudent, int studentINN) {
         this.nameStudent = nameStudent;
         this.studentINN = studentINN;
     }
@@ -27,6 +27,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Name - " + nameStudent + " Score - " + studentINN;
+        return "Name - " + nameStudent + "; Score - " + studentINN;
     }
 }

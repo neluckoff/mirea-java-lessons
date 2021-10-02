@@ -9,16 +9,13 @@ public class WaitList<E> implements IWaitList<E> {
     public WaitList() {
         content = new ConcurrentLinkedQueue<>();
     }
-
     public WaitList(ConcurrentLinkedQueue<E> content) {
         this.content = content;
     }
 
     @Override
     public String toString() {
-        return "WaitList{" +
-                "content=" + content +
-                '}';
+        return "WaitList{" + "content=" + content + '}';
     }
 
     @Override
