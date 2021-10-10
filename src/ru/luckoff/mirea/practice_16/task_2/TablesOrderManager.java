@@ -15,6 +15,5 @@ public class TablesOrderManager {
         System.out.println(order);
 
         System.out.println("Узнаем Описание первого напитка: " + firstDrink.getDescription());
-        System.out.println("Узнаем Цену первого блюда: $" + firstDish.getCost());
     }
 }
