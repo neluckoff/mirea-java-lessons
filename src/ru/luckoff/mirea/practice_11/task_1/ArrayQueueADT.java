@@ -7,7 +7,6 @@ public class ArrayQueueADT {
     private Object[] elements = new Object[10];
 
     public static void push(ArrayQueueADT stack, Object element) {
-        assert element != null;
         ensureCapacity(stack, stack.size + 1);
         stack.elements[stack.size++] = element;
     }
@@ -19,14 +18,10 @@ public class ArrayQueueADT {
     }
 
     public static Object pop(ArrayQueueADT stack) {
-        assert stack.size > 0;
-
         return stack.elements[--stack.size];
     }
 
     public static Object peek(ArrayQueueADT stack) {
-        assert stack.size > 0;
-
         return stack.elements[stack.size - 1];
     }
     public static int size(ArrayQueueADT stack) {

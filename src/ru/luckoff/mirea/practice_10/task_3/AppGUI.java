@@ -70,9 +70,13 @@ public class AppGUI extends JFrame {
             musicFac.CreateOpen();
         });
 
-        save.addActionListener(e -> {JOptionPane.showMessageDialog(null,
-                "Document has been saved.", "Saved", JOptionPane.INFORMATION_MESSAGE);
-            System.out.println("Document has been saved.");
+        save.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null,
+                        "Document has been saved.", "Saved", JOptionPane.INFORMATION_MESSAGE);
+                System.out.println("Document has been saved.");
+            }
         });
 
         return file;

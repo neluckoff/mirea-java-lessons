@@ -7,7 +7,6 @@ public class ArrayQueueModule {
     private static Object[] elements = new Object[5];
 
     public static void push(Object element) {
-        assert element != null;
         ensureCapacity(size + 1);
         elements[size++] = element;
     }
@@ -19,12 +18,10 @@ public class ArrayQueueModule {
     }
 
     public static Object pop() {
-        assert size > 0;
         return elements[--size];
     }
 
-    public static Object peek() {
-        assert size > 0;
+    public static Object peek() { //n
         return elements[size - 1];
     }
 
