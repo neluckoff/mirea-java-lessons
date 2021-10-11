@@ -2,16 +2,22 @@ package ru.luckoff.mirea.practice_12_13_14_15.task_3;
 
 public class Shirt {
     private final String[] shirt = new String[11];
+    private String num, name, color, size;
+
+    public Shirt() {
+    }
 
     public void addShirt(String shirt, int i) {
-        this.shirt[i] = shirt;
+        switch (i) {
+            case 0 -> num = shirt;
+            case 1 -> name = shirt;
+            case 2 -> color = shirt;
+            case 3 -> size = shirt;
+        }
     }
 
     public String toString() {
-        for (int i = 0; i < 11; i++) {
-            System.out.println(shirt[i]);
-        }
-        return null;
+        return (num + " | " + name + " | " + color + " | " + size);
     }
 
     public static void main(String[] args) {
@@ -30,10 +36,14 @@ public class Shirt {
         shirts[9] = "S010,Orange T-Shirt,Orange,S";
         shirts[10] = "S011,Maroon Polo Shirt,Maroon,S";
 
-        for (int i = 0; i < 11; i++) {
-            str.addShirt(shirts[i].replace(",", " | "), i);
+        int j=0, i=0;
+        for (i = 0; i < 11; i++) {
+            for (String data : shirts[i].split(",")) {
+                str.addShirt(data, j);
+                j++;
+            }
+            j = 0;
+            System.out.println(str);
         }
-
-        str.toString();
     }
 }
