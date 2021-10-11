@@ -1,7 +1,6 @@
 package ru.luckoff.mirea.practice_12_13_14_15.task_3;
 
 public class Shirt {
-    private final String[] shirt = new String[11];
     private String num, name, color, size;
 
     public Shirt() {
@@ -37,12 +36,12 @@ public class Shirt {
         shirts[10] = "S011,Maroon Polo Shirt,Maroon,S";
 
         for (int i = 0; i < 11; i++) {
-            int j=0;
-            for (String data : shirts[i].split(",")) {
-                str.addShirt(data, j);
-                j++;
+            String[] spl = shirts[i].split(",");
+            for (int j = 0; j < spl.length; j++) {
+                str.addShirt(spl[j], j);
             }
             System.out.println(str);
+
         }
     }
 }
