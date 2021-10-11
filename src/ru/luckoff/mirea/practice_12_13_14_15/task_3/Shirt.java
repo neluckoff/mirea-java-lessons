@@ -36,13 +36,12 @@ public class Shirt {
         shirts[9] = "S010,Orange T-Shirt,Orange,S";
         shirts[10] = "S011,Maroon Polo Shirt,Maroon,S";
 
-        int j=0, i=0;
-        for (i = 0; i < 11; i++) {
+        for (int i = 0; i < 11; i++) {
+            int j=0;
             for (String data : shirts[i].split(",")) {
                 str.addShirt(data, j);
                 j++;
             }
-            j = 0;
             System.out.println(str);
         }
     }
