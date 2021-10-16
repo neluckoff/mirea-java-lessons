@@ -1,25 +1,19 @@
 package ru.luckoff.mirea.practice_16.task_2;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Orders {
-    public List<Item> list;
+    public static void main(String[] args) {
+        Drink firstDrink = new Drink(5, "Coca-Cola", "Вкусный напиток!");
+        Dish firstDish = new Dish(14, "Лазанья", "Вкусная и пряная!");
 
-    public Orders() {
-        this.list = new ArrayList<>();
-    }
+        TablesOrderManager order = new TablesOrderManager();
+        order.add(firstDish);
+        order.add(firstDrink);
+        order.add(new Dish("Суп \"Чучвара\"", "Томатный суп с пельменями"));
+        System.out.println(order);
 
-    public void add(Item item) {
-        list.add(item);
-    }
+        order.remove(firstDish);
+        System.out.println(order);
 
-    public void remove(Item item) {
-        list.remove(item);
-    }
-
-    @Override
-    public String toString() {
-        return list.toString();
+        System.out.println("Узнаем Описание первого напитка: " + firstDrink.getDescription());
     }
 }

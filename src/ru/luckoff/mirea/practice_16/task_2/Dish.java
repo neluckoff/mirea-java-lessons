@@ -1,17 +1,17 @@
 package ru.luckoff.mirea.practice_16.task_2;
 
-final class Dish implements Item {
+public final class Dish implements Item {
     final int cost;
     final String name;
     final String description;
 
-    Dish(String name, String description) {
+    public Dish(String name, String description) {
         this.cost = 0;
         this.name = name;
         this.description = description;
     }
 
-    Dish(int cost, String name, String description) {
+    public Dish(int cost, String name, String description) {
         this.cost = cost;
         this.name = name;
         this.description = description;

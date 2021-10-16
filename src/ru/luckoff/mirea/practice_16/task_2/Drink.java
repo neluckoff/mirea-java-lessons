@@ -1,6 +1,6 @@
 package ru.luckoff.mirea.practice_16.task_2;
 
-final class Drink implements Item {
+public final class Drink implements Item {
     final int cost;
     final String name;
     final String description;
