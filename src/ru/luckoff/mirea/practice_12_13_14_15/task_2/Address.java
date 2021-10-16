@@ -10,27 +10,13 @@ public class Address {
 
     public void addAddress(String data, int i) {
         switch (i) {
-            case 0:
-                country = data;
-                break;
-            case 1:
-                region = data;
-                break;
-            case 2:
-                city = data;
-                break;
-            case 3:
-                street = data;
-                break;
-            case 4:
-                house = data;
-                break;
-            case 5:
-                block = data;
-                break;
-            case 6:
-                flat = data;
-                break;
+            case 0 -> country = data;
+            case 1 -> region = data;
+            case 2 -> city = data;
+            case 3 -> street = data;
+            case 4 -> house = data;
+            case 5 -> block = data;
+            case 6 -> flat = data;
         }
     }
 
