@@ -1,6 +1,5 @@
 package ru.luckoff.mirea.exercies17and18.task_3;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
