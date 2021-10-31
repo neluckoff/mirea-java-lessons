@@ -33,15 +33,15 @@ public class Main {
 
         orderManager.add("Москва, ул. Тверская, д. 2", internetOrder);
         orderManager.add("Москва, пр. Вернадского, д. 6", internetOrder);
-        orderManager.add(1, restaurantOrder2);
+        orderManager.add(0, restaurantOrder2);
         orderManager.add(2, restaurantOrder);
 
-        System.out.println("itemQuantity Restaurant - Coca-Cola: " + orderManager.itemRestaurantQuantity("Coca-Cola"));
-        System.out.println("itemQuantity Restaurant - Суп \"Чучвара\": " + orderManager.itemRestaurantQuantity("Суп \"Чучвара\""));
-        System.out.println("itemQuantity Internet - Суп \"Чучвара\": " + orderManager.itemInternetQuantity("Суп \"Чучвара\""));
-        System.out.println("hashCostSummary: " + orderManager.hashCostSummary());
-        System.out.println("ordersCostSummary: " + orderManager.ordersCostSummary());
-        System.out.println("freeTableNumber: " + orderManager.freeTableNumber()); //kawo
-        System.out.println("freeTableNumbers: " + Arrays.toString(orderManager.freeTableNumbers()));
+        System.out.println("Количество в Ресторанных заказах - Coca-Cola: " + orderManager.itemRestaurantQuantity("Coca-Cola"));
+        System.out.println("Количество в Ресторанных заказах - Суп \"Чучвара\": " + orderManager.itemRestaurantQuantity("Суп \"Чучвара\""));
+        System.out.println("Количество в Интернет заказах - Суп \"Чучвара\": " + orderManager.itemInternetQuantity("Суп \"Чучвара\""));
+        System.out.println("Интернет сумма - $" + orderManager.internetCostSummary());
+        System.out.println("Ресторанная сумма - $" + orderManager.restaurantCostSummary());
+        System.out.println("Следующий свободный стол - №" + orderManager.freeTableNumber());
+        System.out.println("Свободные столы - " + Arrays.toString(orderManager.freeTableNumbers()));
     }
 }

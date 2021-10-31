@@ -1,12 +1,9 @@
 package ru.luckoff.mirea.practice_16.items;
 
-import java.text.DecimalFormat;
-
 public class Dish implements Item {
     private int price;
     private String name;
     private String description;
-    private int priceZero = 0;
 
     public Dish(int price, String name, String description) throws IllegalArgumentException{
         if(price < 0 || name.equals("") || description.equals(""))
@@ -21,7 +18,7 @@ public class Dish implements Item {
         if(name.equals("") || description.equals(""))
             throw new IllegalArgumentException();
 
-        this.price = priceZero;
+        this.price = 0;
         this.name = name;
         this.description = description;
     }
@@ -41,12 +38,8 @@ public class Dish implements Item {
         return name;
     }
 
-    public String getPriceFormat() {
-        return new DecimalFormat("###,###").format(price) + "$";
-    }
-
     @Override
     public String toString() {
-        return "Блюдо " + name + " стоит " + getPriceFormat() + ". Описание: " + description;
+        return "Блюдо " + name + " стоит $" + getPrice() + ". Описание: " + description;
     }
 }

@@ -72,14 +72,14 @@ public class OrderManager {
         return internetOrders.values().toArray(new Order[0]);
     }
 
-    public double ordersCostSummary() {
+    public double restaurantCostSummary() {
         int count = 0;
         for (int i = 0; i < 20; i++)
             if (restaurantOrders[i] != null) count += restaurantOrders[i].costTotal();
         return count;
     }
 
-    public double hashCostSummary() {
+    public double internetCostSummary() {
         int count = 0;
         for(Order i: internetOrders.values())
             count += i.costTotal();

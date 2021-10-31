@@ -4,7 +4,6 @@ import ru.luckoff.mirea.practice_16.items.Item;
 import ru.luckoff.mirea.practice_16.lists.OrderList;
 
 public class InternetOrder implements Order {
-
     OrderList<Item> list = new OrderList<>();
 
     public InternetOrder() {
@@ -102,8 +101,8 @@ public class InternetOrder implements Order {
 
     public Item[] sortedItemsByCostDesc(){
         Item[] k = getItems();
-        for (int out = list.size() - 1; out >= 1; out--)  //Внешний цикл
-            for (int in = 0; in < out; in++)    //Внутренний цикл
+        for (int out = list.size() - 1; out >= 1; out--)
+            for (int in = 0; in < out; in++)
                 if(k[in].getPrice() < k[in + 1].getPrice()) {
                     Item t = k[in];
                     k[in] = k[in+1];
