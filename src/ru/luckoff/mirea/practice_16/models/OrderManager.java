@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OrderManager {
-
     private Order[] restaurantOrders = new Order[20];
     private Map<String, Order> internetOrders = new HashMap<>();
 

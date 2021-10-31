@@ -3,7 +3,6 @@ package ru.luckoff.mirea.practice_16.models;
 import ru.luckoff.mirea.practice_16.items.Item;
 
 public class RestaurantOrder implements Order {
-
     private final int sizeD = 10;
     private int size = 0;
     private Item[] items = new Item[sizeD];
@@ -77,8 +76,8 @@ public class RestaurantOrder implements Order {
     }
 
     public Item[] sortedItemsByCostDesc(){
-        for (int out = size - 1; out >= 1; out--)  //Внешний цикл
-            for (int in = 0; in < out; in++)    //Внутренний цикл
+        for (int out = size - 1; out >= 1; out--)
+            for (int in = 0; in < out; in++)
                 if(items[in].getPrice() > items[in + 1].getPrice()) {
                     Item k = items[in];
                     items[in] = items[in + 1];
