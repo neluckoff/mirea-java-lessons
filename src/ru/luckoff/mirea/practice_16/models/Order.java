@@ -1,6 +1,6 @@
-package ru.luckoff.mirea.practice_16.task_3;
+package ru.luckoff.mirea.practice_16.models;
 
-import ru.luckoff.mirea.practice_16.task_2.Item;
+import ru.luckoff.mirea.practice_16.items.Item;
 
 public interface Order {
     boolean add(Item item);
@@ -9,6 +9,6 @@ public interface Order {
     double costTotal();
     Item[] getItems();
     int itemQuantity(String itemName);
-    String[] dishesNames();
-    Item[] sortedDishesByCostDesc();
+    String[] itemsNames();
+    Item[] sortedItemsByCostDesc();
 }
