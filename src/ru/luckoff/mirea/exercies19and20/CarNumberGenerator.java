@@ -16,7 +16,7 @@ public class CarNumberGenerator {
         TreeSet<String> treeSet = new TreeSet();
 
         //одинаковые буквы
-        int n = 1; // по умолчанию - 999
+        int n = 999; // по умолчанию - 999
 
         for (String a123 : letter) {
             for (int reg = 1; reg <= 199; reg++) {
