@@ -10,14 +10,26 @@ public class CarNumberGenerator {
 
         String[] letter = {"А", "В", "Е", "К", "М", "Н", "О", "Р", "С", "Т", "У", "Х"};
         Arrays.sort(letter);
-        HashSet<String> arrNumber = new HashSet<>();
 
-        int n = 1;
+        ArrayList<String> arrayList = new ArrayList<>();
+        HashSet<String> hashSet = new HashSet<>();
+        TreeSet<String> treeSet = new TreeSet();
+
         //одинаковые буквы
+        int n = 1; // по умолчанию - 999
+
         for (String a123 : letter) {
             for (int reg = 1; reg <= 199; reg++) {
                 for (int j = 1; j <= n; j++) {
-                    arrNumber.add(String.format("%s%03d%s%s%d", a123, j, a123, a123, reg));
+                    if (reg < 10) {
+                        arrayList.add(String.format("%s%03d%s%s%02d", a123, j, a123, a123, reg));
+                        hashSet.add(String.format("%s%03d%s%s%02d", a123, j, a123, a123, reg));
+                        treeSet.add(String.format("%s%03d%s%s%02d", a123, j, a123, a123, reg));
+                    } else {
+                        arrayList.add(String.format("%s%03d%s%s%d", a123, j, a123, a123, reg));
+                        hashSet.add(String.format("%s%03d%s%s%d", a123, j, a123, a123, reg));
+                        treeSet.add(String.format("%s%03d%s%s%d", a123, j, a123, a123, reg));
+                    }
                 }
             }
         }
@@ -28,29 +40,62 @@ public class CarNumberGenerator {
                 for (String a2 : letter) {
                     for (String a3 : letter) {
                         for (int reg = 1; reg <= 199; reg++) {
-                            arrNumber.add(String.format("%s%03d%s%s%d", a1, i, a2, a3, reg));
+                            if (reg < 10) {
+                                arrayList.add(String.format("%s%03d%s%s%02d", a1, i, a2, a3, reg));
+                                hashSet.add(String.format("%s%03d%s%s%02d", a1, i, a2, a3, reg));
+                                treeSet.add(String.format("%s%03d%s%s%02d", a1, i, a2, a3, reg));
+                            } else {
+                                arrayList.add(String.format("%s%03d%s%s%d", a1, i, a2, a3, reg));
+                                hashSet.add(String.format("%s%03d%s%s%d", a1, i, a2, a3, reg));
+                                treeSet.add(String.format("%s%03d%s%s%d", a1, i, a2, a3, reg));
+                            }
                         }
                     }
                 }
             }
         }
 
+        System.out.println(arrayList);
 
-        ArrayList<String> arrNum = new ArrayList<>(arrNumber);
-        System.out.println(arrNum);
-
-        System.out.print("Введите номер для поиска прямым перебором по ArrayList, (array.contains()) - ");
+        System.out.print("Введите номер для поиска - ");
         String search = in.next();
-        long m = System.currentTimeMillis();
-        if (arrNum.contains(search) == true) {
-            System.out.println("Поиск перебором: номер " + search + " найден, поиск занял " +
-                    (double) (System.currentTimeMillis() - m) + "нс");
-        } else System.out.println("Поиск перебором: номер " + search + " не найден, поиск занял " +
-                (double) (System.currentTimeMillis() - m) + "нс");
 
-        System.out.print("Введите номер для поиска бинарным поиском по сортированному ArrayList, (Collections.binarySearch()) - ");
-        search = in.next();
-        System.out.println(Collections.binarySearch(arrNum, search, Collections.reverseOrder()));
+        //Поиск перебором
+        long m = System.nanoTime();
+        if (arrayList.contains(search)) {
+            System.out.println("Поиск перебором: номер " + search + " найден, поиск занял " +
+                    (System.nanoTime() - m) + "нс");
+        } else System.out.println("Поиск перебором: номер " + search + " не найден, поиск занял " +
+                (System.nanoTime() - m) + "нс");
+
+
+        //Бинарный поиск
+        Collections.sort(arrayList);
+        long m1 = System.nanoTime();
+        boolean result = arrayList.contains(search);
+        if (result) {
+            System.out.println("Бинарный поиск: номер " + search + " найден, поиск занял " +
+                    (System.nanoTime() - m1) + "нс");
+        } else System.out.println("Бинарный поиск: номер " + search + " не найден, поиск занял " +
+                (System.nanoTime() - m1) + "нс");
+
+
+        //Поиск в HashSet
+        long m2 = System.nanoTime();
+        if (hashSet.contains(search)) {
+            System.out.println("Поиск в HashSet: номер " + search + " найден, поиск занял " +
+                    (System.nanoTime() - m2) + "нс");
+        } else System.out.println("Поиск в HashSet: номер " + search + " не найден, поиск занял " +
+                (System.nanoTime() - m2) + "нс");
+
+
+        //Поиск в TreeSet
+        long m3 = System.nanoTime();
+        if (treeSet.contains(search)) {
+            System.out.println("Поиск в TreeSet: номер " + search + " найден, поиск занял " +
+                    (System.nanoTime() - m3) + "нс");
+        } else System.out.println("Поиск в TreeSet: номер " + search + " не найден, поиск занял " +
+                (System.nanoTime() - m3) + "нс");
 
     }
 }
