@@ -1,9 +1,6 @@
 package ru.luckoff.mirea.exercies23and24.task_2;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.URL;
 
 import org.jsoup.Jsoup;
@@ -16,6 +13,8 @@ public class HTMLParser {
     private static String IMAGE_DESTINATION_FOLDER = "src/ru/luckoff/mirea/exercies23and24/task_2/images";
 
     public static void main(String[] args) throws IOException {
+        new File("src/ru/luckoff/mirea/exercies23and24/task_2/images").mkdirs();
+
         String strURL = "http://www.mirea.ru";
         Document document = Jsoup
                 .connect(strURL)
