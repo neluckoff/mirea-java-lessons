@@ -8,10 +8,18 @@ public class Shirt {
 
     public void addShirt(String shirt, int i) {
         switch (i) {
-            case 0 -> num = shirt;
-            case 1 -> name = shirt;
-            case 2 -> color = shirt;
-            case 3 -> size = shirt;
+            case 0:
+                num = shirt;
+                break;
+            case 1:
+                name = shirt;
+                break;
+            case 2:
+                color = shirt;
+                break;
+            case 3:
+                size = shirt;
+                break;
         }
     }
 

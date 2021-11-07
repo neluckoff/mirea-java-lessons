@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        String testStr = "abcdefghijklmnopqrstuv18340";
+        String testStr = "abcdefghijklmnopqrstuv340";
         System.out.println("Является строка в testStr строкой 'abcdefghijklmnopqrstuv18340': "
                 + testStr.matches("abcdefghijklmnopqrstuv18340"));
 
