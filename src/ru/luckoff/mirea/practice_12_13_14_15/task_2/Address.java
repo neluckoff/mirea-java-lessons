@@ -2,10 +2,6 @@ package ru.luckoff.mirea.practice_12_13_14_15.task_2;
 
 import java.util.StringTokenizer;
 
-interface Testable {
-    void toDo();
-}
-
 public class Address {
     private String country, region, city, street, house, block, flat;
 
@@ -15,12 +11,7 @@ public class Address {
     public void addAddress(String data, int i) {
         switch (i) {
             case 0:
-                new Testable() {
-                    @Override
-                    public void toDo() {
-                        country = data;
-                    }
-                };
+                country = data;
                 break;
             case 1:
                 region = data;

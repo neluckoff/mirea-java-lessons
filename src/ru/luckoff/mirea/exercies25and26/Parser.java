@@ -26,15 +26,13 @@ public class Parser {
         result.add("stations", station);
         result.add("lines", lines);
         Elements stations = document.select("div.js-metro-stations");
-        for (Element stat : stations)
-        {
+        for (Element stat : stations) {
             JsonArray st = new JsonArray();
             for(Element el : stat.select("span.name")) st.add(el.text());
             station.add(stat.attr("data-line"), st);
         }
         Elements lnes = document.select("span.js-metro-line");
-        for (Element line : lnes)
-        {
+        for (Element line : lnes) {
             JsonObject el = new JsonObject();
             el.addProperty("number", line.attr("data-line"));
             el.addProperty("name", line.text());
@@ -44,10 +42,8 @@ public class Parser {
         openJSON();
     }
 
-    public void saveJSON(String json)
-    {
-        try(FileWriter writer = new FileWriter("src/ru/luckoff/mirea/exercies25and26/map.json", false))
-        {
+    public void saveJSON(String json) {
+        try(FileWriter writer = new FileWriter("src/ru/luckoff/mirea/exercies25and26/map.json", false)) {
             writer.write(json);
             writer.flush();
         } catch (IOException e) {
@@ -55,11 +51,9 @@ public class Parser {
         }
     }
 
-    public void openJSON()
-    {
+    public void openJSON() {
         String json = "";
-        try(FileReader reader = new FileReader("src/ru/luckoff/mirea/exercies25and26/map.json"))
-        {
+        try(FileReader reader = new FileReader("src/ru/luckoff/mirea/exercies25and26/map.json")) {
             // читаем посимвольно
             int c;
             while((c=reader.read())!=-1){
