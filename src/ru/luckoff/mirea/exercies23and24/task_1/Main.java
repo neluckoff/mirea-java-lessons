@@ -10,7 +10,8 @@ public class Main {
 
         CSVParser csv = new CSVParser();
 
-        List<String> lines = Files.readAllLines(Paths.get("src/ru/luckoff/mirea/exercies23and24/task_1/movementList.csv"));
+        List<String> lines = Files.readAllLines
+                (Paths.get("src/ru/luckoff/mirea/exercies23and24/task_1/movementList.csv"));
         for (int i = 1; i < lines.size(); i++) {
             csv.CalculateData(lines.get(i));
         }

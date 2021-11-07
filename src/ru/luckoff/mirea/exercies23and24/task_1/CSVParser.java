@@ -11,7 +11,8 @@ public class CSVParser {
     public void CalculateData(String input) {
         String[] columns = input.split(",", 8);
         double incomeTmp = Double.parseDouble(columns[6]);
-        double expenseTmp = Double.parseDouble(columns[7].replaceAll("\\\"", "").replace(',', '.'));
+        double expenseTmp = Double.parseDouble(columns[7].
+                replaceAll("\\\"", "").replace(',', '.'));
         if (incomeTmp == 0)
             calculateExpense(columns[5], expenseTmp);
         else

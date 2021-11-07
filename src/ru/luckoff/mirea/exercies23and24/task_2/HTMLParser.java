@@ -9,7 +9,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class HTMLParser {
-
     private static String IMAGE_DESTINATION_FOLDER = "src/ru/luckoff/mirea/exercies23and24/task_2/images";
 
     public static void main(String[] args) throws IOException {
