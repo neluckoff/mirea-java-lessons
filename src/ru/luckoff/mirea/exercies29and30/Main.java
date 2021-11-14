@@ -10,8 +10,8 @@ import java.io.BufferedReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Comparator<Map.Entry<String, Integer>> c1 = Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder());
-        Comparator<Map.Entry<String, Integer>> c2 = Comparator.comparing(Map.Entry::getKey);
+        Comparator<Map.Entry<String, Integer>> c1 = Map.Entry.comparingByValue(Comparator.reverseOrder());
+        Comparator<Map.Entry<String, Integer>> c2 = Map.Entry.comparingByKey();
 
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
